@@ -61,8 +61,8 @@ class MainActivity : Activity() {
         button(row2, "لعب تلقائي") { toggleAuto() }
         button(row2, "تراجع") { autoPlaying = false; if (history.isNotEmpty()) { state = history.removeAt(history.lastIndex); render() } }
         val row3 = row()
-        button(row3, "سحب 1") { state.drawCount = 1; draw() }
-        button(row3, "سحب 3") { state.drawCount = 3; draw() }
+        button(row3, "سحب 1") { state.drawCount = 1; render() }
+        button(row3, "سحب 3") { state.drawCount = 3; render() }
         button(row3, "اختبار 2000 توزيع") { runStress() }
         label("لوحة الأوراق", 18, text, true)
         board = label("", 13, text)
